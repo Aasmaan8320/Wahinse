@@ -15,6 +15,12 @@
 
 Test locally any time: `pip install yfinance && python3 update_data.py` (or `--offline` without internet).
 
+## New in this version
+- `og.png` — the preview card shown when wahinse.com is shared on WhatsApp/social. Upload it to the repo root alongside index.html.
+- Story deep links — every story now has its own URL, e.g. `https://wahinse.com/#story=jindal`. Use these as the reel-specific "link in bio" so viewers land directly on the story the reel promoted. Keys: dhirubhai, damani, nadar, shanghvi, mittal, karsanbhai, adani, jindal, nayar, kotak, yusuffali.
+- WhatsApp share button on every story — pre-filled message with the deep link.
+- Analytics — the site includes a GoatCounter snippet (free, privacy-friendly, no cookies). One-time setup: go to goatcounter.com → sign up → choose the code `wahinse` (so your dashboard is wahinse.goatcounter.com). If that code is taken, pick another and update the `data-goatcounter` URL in index.html to match. Your visitor dashboard then works automatically.
+
 ## Your recurring maintenance
 - **Quarterly (~15 min):** when BSE/NSE shareholding filings drop, update `stake` values in `update_data.py`.
 - **As you verify:** the 15 entries marked `est.` in `index.html` carry seed figures — verify each against Hurun India / Forbes India, and move listed-company families into `ENGINE` (add ticker + stake) so they update live too.
