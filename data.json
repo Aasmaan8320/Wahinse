@@ -1,0 +1,29 @@
+{
+ "updated_iso": "2026-07-03",
+ "updated_hi": "3 जुलाई 2026 को अपडेट",
+ "updated_en": "Updated 3 July 2026",
+ "usd_inr": 87.0,
+ "mode": "offline (fallback caps)",
+ "india": {
+  "Mukesh Ambani & family": {
+   "lcr": 8.83,
+   "usd": 101.5
+  },
+  "Sunil Mittal & family": {
+   "lcr": 2.63,
+   "usd": 30.2
+  },
+  "Dilip Shanghvi & family": {
+   "lcr": 2.44,
+   "usd": 28.0
+  },
+  "RK Damani & family": {
+   "lcr": 2.03,
+   "usd": 23.4
+  },
+  "Shiv Nadar family": {
+   "lcr": 1.9,
+   "usd": 21.9
+  }
+ }
+}

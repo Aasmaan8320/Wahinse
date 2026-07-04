@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>वहीं से · WahinSe — India Rich List & Success Stories</title>
+<meta name="description" content="Daily-updated rich list of India and the world, with the origin stories behind every fortune. वो भी वहीं से शुरू हुए थे, जहाँ आप आज हैं।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2A4A; --ink-soft:#44526E; --ink-faint:#8B94A8;
+  --paper:#FDFCF8; --card:#FFFFFF; --line:#E7E4DA;
+  --marigold:#E3A82B; --marigold-deep:#8A6210; --marigold-tint:#FBF3DE;
+  --rise:#1D7A5F; --rise-tint:#E6F2ED; --fall:#B33A3A; --fall-tint:#F8ECEC;
+  --disp:'Tiro Devanagari Hindi',serif; --body:'Mukta',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
+.wrap{max-width:660px;margin:0 auto;padding:0 16px}
+
+/* header */
+header{background:var(--ink);color:#FDFCF8;position:sticky;top:0;z-index:40}
+.hbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{font-family:var(--disp);font-size:26px;letter-spacing:.5px;position:relative;display:inline-block}
+.logo em{font-style:normal;color:var(--marigold)}
+.logo::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:3px;
+  background:linear-gradient(90deg,var(--marigold) 0 25%,transparent 25% 30%,var(--marigold) 30% 55%,transparent 55% 60%,var(--marigold) 60% 100%);
+  animation:rise 1.2s .3s ease forwards}
+@keyframes rise{to{width:100%}}
+@media (prefers-reduced-motion:reduce){.logo::after{animation:none;width:100%}}
+.lang{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:#FDFCF8;font-family:var(--body);font-size:13px;padding:5px 14px;cursor:pointer}
+.lang button.on{background:var(--marigold);color:var(--ink);font-weight:700}
+
+/* hero */
+.hero{background:var(--ink);color:#FDFCF8;padding:26px 0 30px;overflow:hidden}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(26px,6.4vw,40px);line-height:1.35;max-width:560px}
+.hero h1 .gold{color:var(--marigold)}
+.hero p.sub{color:#C6CCDA;font-size:15px;margin-top:10px;max-width:520px}
+.hero .liveline{margin-top:18px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:8px 14px;font-size:14px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--rise);box-shadow:0 0 0 3px rgba(29,122,95,.3)}
+
+/* nav tabs */
+nav.tabs{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:52px;z-index:30}
+.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;font-family:var(--body);font-size:15px;
+  color:var(--ink-soft);padding:12px 14px;cursor:pointer;white-space:nowrap}
+.tabs button.on{color:var(--ink);font-weight:700;border-bottom-color:var(--marigold)}
+
+section{display:none;padding:22px 0 40px}
+section.on{display:block}
+h2.sec{font-family:var(--disp);font-weight:400;font-size:24px;margin-bottom:4px}
+p.secsub{color:var(--ink-soft);font-size:14px;margin-bottom:14px}
+.stamp{display:inline-flex;align-items:center;gap:6px;background:var(--rise-tint);color:var(--rise);
+  font-size:12px;font-weight:500;border-radius:999px;padding:3px 10px;margin-bottom:14px}
+
+/* filters */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chips button{font-family:var(--body);font-size:13px;border:1px solid var(--line);background:var(--card);
+  color:var(--ink-soft);border-radius:999px;padding:5px 14px;cursor:pointer}
+.chips button.on{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:500}
+
+/* list rows */
+.row{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px;
+  display:grid;grid-template-columns:46px 1fr auto;gap:12px;align-items:center}
+.rankbox{display:flex;flex-direction:column;align-items:center;gap:4px}
+.rank{font-family:var(--disp);font-size:20px;color:var(--ink-faint)}
+.steps{display:flex;align-items:flex-end;gap:1.5px;height:16px}
+.steps i{width:4px;background:var(--marigold);border-radius:1px;display:block}
+.who .nm{font-weight:700;font-size:16px;line-height:1.3}
+.who .co{font-size:13px;color:var(--ink-soft)}
+.who .origin{display:inline-block;margin-top:6px;font-size:12px;background:var(--marigold-tint);
+  color:var(--marigold-deep);border-radius:999px;padding:2px 10px}
+.who .est{display:inline-block;margin-top:6px;margin-left:4px;font-size:11px;color:var(--ink-faint);
+  border:1px dashed var(--line);border-radius:999px;padding:2px 8px}
+.worth{text-align:right}
+.worth .v{font-weight:700;font-size:16px;white-space:nowrap}
+.worth .u{font-size:12px;color:var(--ink-faint);white-space:nowrap}
+.row .storybtn{grid-column:2/4;justify-self:start;margin-top:2px;font-family:var(--body);font-size:13px;font-weight:500;
+  background:none;border:1px solid var(--ink);color:var(--ink);border-radius:999px;padding:4px 14px;cursor:pointer}
+.row .storybtn:hover{background:var(--ink);color:#fff}
+
+/* stories */
+.scard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;cursor:pointer}
+.scard .tag{display:inline-block;font-size:12px;background:var(--rise-tint);color:var(--rise);border-radius:999px;padding:2px 10px;margin-bottom:8px}
+.scard h3{font-family:var(--disp);font-weight:400;font-size:21px;line-height:1.35}
+.scard p{color:var(--ink-soft);font-size:14px;margin-top:6px}
+.scard .read{color:var(--marigold-deep);font-weight:500;font-size:14px;margin-top:10px;display:inline-block}
+
+/* story overlay */
+.overlay{position:fixed;inset:0;background:rgba(27,42,74,.55);z-index:60;display:none;overflow-y:auto;padding:20px 0}
+.overlay.on{display:block}
+.panel{background:var(--paper);max-width:620px;margin:0 auto;border-radius:16px;padding:26px 22px 34px;position:relative}
+.panel .close{position:sticky;top:0;float:right;background:var(--ink);color:#fff;border:0;border-radius:999px;
+  width:34px;height:34px;font-size:16px;cursor:pointer}
+.panel .tag{display:inline-block;font-size:12px;background:var(--rise-tint);color:var(--rise);border-radius:999px;padding:2px 10px}
+.panel h3{font-family:var(--disp);font-weight:400;font-size:28px;margin:10px 0 2px;line-height:1.3}
+.panel .meta{color:var(--ink-faint);font-size:13px;margin-bottom:16px}
+.beat{margin:18px 0}
+.beat .bt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--marigold-deep);font-weight:700;margin-bottom:4px}
+.beat p{font-size:16px;line-height:1.75}
+.lesson{background:var(--marigold-tint);border:1px solid #EED9A6;border-radius:12px;padding:14px 16px;margin-top:22px}
+.lesson .bt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--marigold-deep);font-weight:700;margin-bottom:4px}
+.lesson p{font-size:15px;line-height:1.7}
+.lesson a{color:var(--marigold-deep);font-weight:700}
+
+/* your turn */
+.res{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--marigold);border-radius:0 12px 12px 0;padding:14px 16px;margin-bottom:12px}
+.res h4{font-size:16px}
+.res p{font-size:14px;color:var(--ink-soft)}
+.res a{color:var(--ink);font-weight:700;font-size:14px}
+
+/* footer */
+footer{background:var(--ink);color:#AEB6C8;font-size:13px;padding:26px 0 40px;line-height:1.8}
+footer strong{color:#FDFCF8}
+footer a{color:var(--marigold)}
+
+@media(min-width:560px){ .row{grid-template-columns:54px 1fr auto} .rank{font-size:24px} }
+button:focus-visible,a:focus-visible{outline:3px solid var(--marigold);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbar">
+    <span class="logo">वहीं <em>से</em></span>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="btn-hi" class="on" onclick="setLang('hi')">हिंदी</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1 data-i18n="heroTitle">वो भी वहीं से शुरू हुए थे,<br><span class="gold">जहाँ आप आज हैं।</span></h1>
+    <p class="sub" data-i18n="heroSub">भारत और दुनिया के सबसे अमीर लोगों की ताज़ा सूची — और हर दौलत के पीछे की असली कहानी।</p>
+    <div class="liveline"><span class="dot"></span><span data-i18n="liveLine">45 अरबपति · रोज़ अपडेट · BSE/NSE + Forbes data</span></div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <div class="wrap">
+    <button class="on" data-tab="india" data-i18n="tabIndia">🇮🇳 भारत Top 20</button>
+    <button data-tab="world" data-i18n="tabWorld">🌏 दुनिया Top 25</button>
+    <button data-tab="stories" data-i18n="tabStories">चप्पल से जहाज़</button>
+    <button data-tab="turn" data-i18n="tabTurn">आपकी बारी</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="india" class="on">
+  <h2 class="sec" data-i18n="indiaH">भारत की अमीर सूची</h2>
+  <p class="secsub" data-i18n="indiaSub">BSE/NSE promoter filings × आज के market caps से हमारा अपना अनुमान।</p>
+  <span class="stamp">● <span data-i18n="updated">3 जुलाई 2026 को अपडेट</span></span>
+  <div class="chips" id="chips-india">
+    <button class="on" data-f="all" data-i18n="fAll">सभी</button>
+    <button data-f="self" data-i18n="fSelf">Zero से शुरू</button>
+    <button data-f="verified" data-i18n="fVer">✓ Verified data</button>
+  </div>
+  <div id="list-india"></div>
+</section>
+
+<section id="world">
+  <h2 class="sec" data-i18n="worldH">दुनिया की अमीर सूची</h2>
+  <p class="secsub" data-i18n="worldSub">Forbes Billionaires data (July 2026) पर आधारित, attribution के साथ।</p>
+  <span class="stamp">● <span data-i18n="updated2">जुलाई 2026 data</span></span>
+  <div class="chips" id="chips-world">
+    <button class="on" data-f="all" data-i18n="fAll2">सभी</button>
+    <button data-f="self" data-i18n="fSelf2">Self-made</button>
+    <button data-f="immig" data-i18n="fImmig">Immigrant / बाहर से आए</button>
+  </div>
+  <div id="list-world"></div>
+</section>
+
+<section id="stories">
+  <h2 class="sec" data-i18n="storiesH">चप्पल से जहाज़</h2>
+  <p class="secsub" data-i18n="storiesSub">चप्पल से जहाज़ तक का सफ़र — महल की नहीं, संघर्ष की कहानियाँ। हर कहानी 3 मिनट में।</p>
+  <div id="list-stories"></div>
+</section>
+
+<section id="turn">
+  <h2 class="sec" data-i18n="turnH">आपकी बारी</h2>
+  <p class="secsub" data-i18n="turnSub">कहानियाँ पढ़ीं? अब पहला कदम। ये सरकारी और मुफ़्त resources आज आपके लिए मौजूद हैं।</p>
+  <div class="res">
+    <h4 data-i18n="r1h">Mudra Loan — बिना guarantee ₹10 लाख तक</h4>
+    <p data-i18n="r1p">छोटा business शुरू करने के लिए सरकारी loan योजना (शिशु/किशोर/तरुण)। किसी भी बैंक में आवेदन करें।</p>
+    <a href="https://www.mudra.org.in" target="_blank" rel="noopener">mudra.org.in →</a>
+  </div>
+  <div class="res">
+    <h4 data-i18n="r2h">Startup India — registration और tax छूट</h4>
+    <p data-i18n="r2p">अपने startup को register करें, 3 साल की tax छूट और funding support पाएँ।</p>
+    <a href="https://www.startupindia.gov.in" target="_blank" rel="noopener">startupindia.gov.in →</a>
+  </div>
+  <div class="res">
+    <h4 data-i18n="r3h">Skill India — मुफ़्त skill training</h4>
+    <p data-i18n="r3p">PMKVY के तहत सैकड़ों trades में free training और certificate।</p>
+    <a href="https://www.skillindiadigital.gov.in" target="_blank" rel="noopener">skillindiadigital.gov.in →</a>
+  </div>
+  <div class="res">
+    <h4 data-i18n="r4h">Stand-Up India — महिलाओं और SC/ST के लिए</h4>
+    <p data-i18n="r4p">नई इकाई शुरू करने के लिए ₹10 लाख से ₹1 करोड़ तक का bank loan।</p>
+    <a href="https://www.standupmitra.in" target="_blank" rel="noopener">standupmitra.in →</a>
+  </div>
+</section>
+
+</main>
+
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeStory()">
+  <div class="panel" id="panel"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <strong>वहीं से · WahinSe</strong> — <span data-i18n="ftag">कहानियाँ उनकी, जो वहीं से शुरू हुए जहाँ आप हैं।</span><br><br>
+    <span data-i18n="fdisc">भारत सूची: अनुमान = listed promoter हिस्सा × market cap (BSE/NSE filings)। निजी संपत्ति, कर्ज़ और pledged shares शामिल नहीं। "est." वाली entries launch से पहले verify होंगी। विश्व सूची: Forbes Billionaires data, जुलाई 2026। यह निवेश सलाह नहीं है।</span>
+  </div>
+</footer>
+
+<script>
+/* ============ DATA ============ */
+/* verified:true = computed by WahinSe valuation engine from BSE/NSE promoter filings x market caps (03-Jul-2026)
+   verified:false = seed estimate from public reports; VERIFY against Hurun India / Forbes India before launch */
+const INDIA = [
+ {r:1,nm:{hi:"Mukesh Ambani परिवार",en:"Mukesh Ambani & family"},co:{hi:"Reliance Industries · 50.07% हिस्सा",en:"Reliance Industries · 50.07% stake"},lcr:8.83,usd:101.5,verified:true,self:false,story:"dhirubhai",origin:{hi:"पिता ने ₹500 से शुरू की",en:"Father started with ₹500"}},
+ {r:2,nm:{hi:"Gautam Adani परिवार",en:"Gautam Adani & family"},co:{hi:"Adani Group · ports, energy",en:"Adani Group · ports, energy"},lcr:7.92,usd:91,verified:false,self:true,origin:{hi:"16 पर पढ़ाई छोड़ी, diamond sorter",en:"Left college at 16, diamond sorter"}},
+ {r:3,nm:{hi:"Savitri Jindal परिवार",en:"Savitri Jindal & family"},co:{hi:"JSW / Jindal Group · steel",en:"JSW / Jindal Group · steel"},lcr:3.05,usd:35,verified:false,self:false,origin:{hi:"9 बच्चों की माँ, 55 पर संभाला साम्राज्य",en:"Mother of 9, took charge at 55"}},
+ {r:4,nm:{hi:"Sunil Mittal परिवार",en:"Sunil Mittal & family"},co:{hi:"Bharti Airtel · ~23% प्रभावी हिस्सा",en:"Bharti Airtel · ~23% effective stake"},lcr:2.63,usd:30.2,verified:true,self:true,story:"mittal",origin:{hi:"साइकिल पार्ट्स से शुरुआत",en:"Started with cycle parts"}},
+ {r:5,nm:{hi:"Dilip Shanghvi परिवार",en:"Dilip Shanghvi & family"},co:{hi:"Sun Pharma · 54.48% हिस्सा",en:"Sun Pharma · 54.48% stake"},lcr:2.44,usd:28.0,verified:true,self:true,story:"shanghvi",origin:{hi:"पिता से $200 उधार लिए",en:"Borrowed $200 from father"}},
+ {r:6,nm:{hi:"Azim Premji परिवार",en:"Azim Premji & family"},co:{hi:"Wipro · IT",en:"Wipro · IT"},lcr:2.09,usd:24,verified:false,self:false,origin:{hi:"21 पर पिता का तेल कारोबार संभाला",en:"Took over father's oil firm at 21"}},
+ {r:7,nm:{hi:"RK Damani परिवार",en:"RK Damani & family"},co:{hi:"DMart · 74.5% हिस्सा",en:"DMart · 74.5% stake"},lcr:2.03,usd:23.4,verified:true,self:true,story:"damani",origin:{hi:"पहली दुकान 47 की उम्र में",en:"First store at 47"}},
+ {r:8,nm:{hi:"Kumar Mangalam Birla",en:"Kumar Mangalam Birla"},co:{hi:"Aditya Birla Group",en:"Aditya Birla Group"},lcr:2.00,usd:23,verified:false,self:false,origin:{hi:"28 पर अचानक मिली विरासत",en:"Sudden inheritance at 28"}},
+ {r:9,nm:{hi:"Cyrus Poonawalla परिवार",en:"Cyrus Poonawalla & family"},co:{hi:"Serum Institute · vaccines",en:"Serum Institute · vaccines"},lcr:1.91,usd:22,verified:false,self:true,origin:{hi:"घोड़ों के farm से vaccine तक",en:"From horse farm to vaccines"}},
+ {r:10,nm:{hi:"Shiv Nadar परिवार",en:"Shiv Nadar family"},co:{hi:"HCL Tech · 60.81% हिस्सा",en:"HCL Tech · 60.81% stake"},lcr:1.90,usd:21.9,verified:true,self:true,story:"nadar",origin:{hi:"गाँव से, ₹1.87 लाख से शुरू",en:"From a village, started with ₹1.87 lakh"}},
+ {r:11,nm:{hi:"Lakshmi Mittal परिवार",en:"Lakshmi Mittal & family"},co:{hi:"ArcelorMittal · steel",en:"ArcelorMittal · steel"},lcr:1.74,usd:20,verified:false,self:true,origin:{hi:"राजस्थान के गाँव में बिना बिजली बचपन",en:"Childhood without electricity, Rajasthan"}},
+ {r:12,nm:{hi:"Anil Agarwal परिवार",en:"Anil Agarwal & family"},co:{hi:"Vedanta · mining",en:"Vedanta · mining"},lcr:1.39,usd:16,verified:false,self:true,origin:{hi:"19 पर पटना से मुंबई, scrap कारोबार",en:"Patna to Mumbai at 19, scrap trade"}},
+ {r:13,nm:{hi:"Uday Kotak",en:"Uday Kotak"},co:{hi:"Kotak Mahindra Bank",en:"Kotak Mahindra Bank"},lcr:1.22,usd:14,verified:false,self:true,origin:{hi:"₹30 लाख उधार से bank खड़ा किया",en:"Built a bank from ₹30 lakh loan"}},
+ {r:14,nm:{hi:"Ravi Jaipuria",en:"Ravi Jaipuria"},co:{hi:"Varun Beverages · Pepsi bottler",en:"Varun Beverages · Pepsi bottler"},lcr:1.13,usd:13,verified:false,self:true,origin:{hi:"एक bottling plant से शुरुआत",en:"Started with one bottling plant"}},
+ {r:15,nm:{hi:"KP Singh परिवार",en:"KP Singh & family"},co:{hi:"DLF · real estate",en:"DLF · real estate"},lcr:1.13,usd:13,verified:false,self:false,origin:{hi:"गाँव-गाँव जाकर ज़मीन जोड़ी",en:"Assembled land village by village"}},
+ {r:16,nm:{hi:"MA Yusuff Ali",en:"MA Yusuff Ali"},co:{hi:"LuLu Group · retail",en:"LuLu Group · retail"},lcr:0.70,usd:8,verified:false,self:true,origin:{hi:"केरल के गाँव से खाड़ी देश, चाचा की दुकान",en:"Kerala village to Gulf, uncle's store"}},
+ {r:17,nm:{hi:"Pankaj Patel परिवार",en:"Pankaj Patel & family"},co:{hi:"Zydus Lifesciences · pharma",en:"Zydus Lifesciences · pharma"},lcr:0.61,usd:7,verified:false,self:false,origin:{hi:"पिता की छोटी दवा कंपनी को बड़ा किया",en:"Scaled father's small pharma firm"}},
+ {r:18,nm:{hi:"Radha Vembu",en:"Radha Vembu"},co:{hi:"Zoho · software",en:"Zoho · software"},lcr:0.48,usd:5.5,verified:false,self:true,origin:{hi:"बिना VC funding, गाँवों में offices",en:"No VC money, offices in villages"}},
+ {r:19,nm:{hi:"Karsanbhai Patel परिवार",en:"Karsanbhai Patel & family"},co:{hi:"Nirma · detergent",en:"Nirma · detergent"},lcr:0.35,usd:4,verified:false,self:true,story:"karsanbhai",origin:{hi:"साइकिल पर घर-घर detergent बेचा",en:"Sold detergent door-to-door on a bicycle"}},
+ {r:20,nm:{hi:"Falguni Nayar परिवार",en:"Falguni Nayar & family"},co:{hi:"Nykaa · beauty e-commerce",en:"Nykaa · beauty e-commerce"},lcr:0.35,usd:4,verified:false,self:true,origin:{hi:"50 की उम्र में नौकरी छोड़ startup",en:"Quit her job at 50 to start up"}},
+];
+
+const WORLD = [
+ {r:1,nm:"Elon Musk",co:{hi:"Tesla, SpaceX",en:"Tesla, SpaceX"},usd:970,self:true,immig:true,origin:{hi:"12 की उम्र में game बेचा, 17 पर घर छोड़ा",en:"Sold a game at 12, left home at 17"}},
+ {r:2,nm:"Larry Page",co:{hi:"Google",en:"Google"},usd:290,self:true,immig:false,origin:{hi:"hostel के कमरे से Google शुरू",en:"Started Google from a dorm project"}},
+ {r:3,nm:"Sergey Brin",co:{hi:"Google",en:"Google"},usd:270,self:true,immig:true,origin:{hi:"6 साल की उम्र में शरणार्थी बनकर आए",en:"Arrived as an immigrant at 6"}},
+ {r:4,nm:"Jeff Bezos",co:{hi:"Amazon",en:"Amazon"},usd:253,self:true,immig:false,origin:{hi:"garage से किताबें बेचना शुरू किया",en:"Started selling books from a garage"}},
+ {r:5,nm:"Michael Dell",co:{hi:"Dell Technologies",en:"Dell Technologies"},usd:219,self:true,immig:false,origin:{hi:"hostel के कमरे में computer जोड़े",en:"Assembled PCs in his dorm room"}},
+ {r:6,nm:"Mark Zuckerberg",co:{hi:"Meta / Facebook",en:"Meta / Facebook"},usd:200,self:true,immig:false,origin:{hi:"19 की उम्र में hostel से शुरुआत",en:"Started from a dorm at 19"}},
+ {r:7,nm:"Larry Ellison",co:{hi:"Oracle",en:"Oracle"},usd:183,self:true,immig:false,origin:{hi:"college छोड़ा, माँ ने अकेले पाला",en:"College dropout, raised by single mother"}},
+ {r:8,nm:"Jensen Huang",co:{hi:"Nvidia",en:"Nvidia"},usd:167,self:true,immig:true,origin:{hi:"restaurant में बर्तन धोए",en:"Washed dishes at a diner"}},
+ {r:9,nm:"Bernard Arnault",co:{hi:"LVMH · luxury",en:"LVMH · luxury"},usd:152,self:false,immig:false,origin:{hi:"पिता की construction कंपनी से शुरुआत",en:"Began in father's construction firm"}},
+ {r:10,nm:"Warren Buffett",co:{hi:"Berkshire Hathaway",en:"Berkshire Hathaway"},usd:149,self:true,immig:false,origin:{hi:"बचपन में अख़बार बाँटे, chewing gum बेची",en:"Delivered papers, sold gum as a kid"}},
+ {r:11,nm:"Amancio Ortega",co:{hi:"Zara / Inditex",en:"Zara / Inditex"},usd:143,self:true,immig:false,origin:{hi:"14 की उम्र में दुकान का छोटा helper",en:"Shop hand at 14"}},
+ {r:12,nm:"Rob Walton",co:{hi:"Walmart",en:"Walmart"},usd:132,self:false,immig:false,origin:{hi:"विरासत — पिता Sam Walton",en:"Heir — father Sam Walton"}},
+ {r:13,nm:"Jim Walton",co:{hi:"Walmart",en:"Walmart"},usd:129,self:false,immig:false,origin:{hi:"विरासत — Walton परिवार",en:"Heir — Walton family"}},
+ {r:14,nm:"Steve Ballmer",co:{hi:"Microsoft",en:"Microsoft"},usd:125,self:true,immig:false,origin:{hi:"employee नंबर 30 — नौकरी से अरबपति",en:"Employee no. 30 — billionaire by salary & stock"}},
+ {r:15,nm:"Carlos Slim Helú",co:{hi:"América Móvil · telecom",en:"América Móvil · telecom"},usd:122,self:true,immig:false,origin:{hi:"12 की उम्र से निवेश करना सीखा",en:"Learned investing at 12"}},
+ {r:16,nm:"Alice Walton",co:{hi:"Walmart",en:"Walmart"},usd:120,self:false,immig:false,origin:{hi:"विरासत — दुनिया की सबसे अमीर महिला",en:"Heir — world's richest woman"}},
+ {r:17,nm:"Michael Bloomberg",co:{hi:"Bloomberg LP",en:"Bloomberg LP"},usd:109,self:true,immig:false,origin:{hi:"39 पर नौकरी से निकाले गए, फिर कंपनी बनाई",en:"Fired at 39, then built his own firm"}},
+ {r:18,nm:"Changpeng Zhao",co:{hi:"Binance · crypto",en:"Binance · crypto"},usd:107,self:true,immig:true,origin:{hi:"McDonald's में burger बनाए",en:"Flipped burgers at McDonald's"}},
+ {r:19,nm:"Bill Gates",co:{hi:"Microsoft",en:"Microsoft"},usd:106,self:true,immig:false,origin:{hi:"college छोड़कर software लिखा",en:"Dropped out to write software"}},
+ {r:20,nm:"Thomas Peterffy",co:{hi:"Interactive Brokers",en:"Interactive Brokers"},usd:104,self:true,immig:true,origin:{hi:"बिना English जाने अमेरिका पहुँचे",en:"Arrived in the US speaking no English"}},
+ {r:21,nm:"F. Bettencourt Meyers",co:{hi:"L'Oréal",en:"L'Oréal"},usd:95,self:false,immig:false,origin:{hi:"विरासत — L'Oréal परिवार",en:"Heir — L'Oréal family"}},
+ {r:22,nm:"Gautam Adani",co:{hi:"Adani Group 🇮🇳",en:"Adani Group 🇮🇳"},usd:91,self:true,immig:false,origin:{hi:"16 पर पढ़ाई छोड़ी, diamond sorter",en:"Left college at 16, diamond sorter"}},
+ {r:23,nm:"Mukesh Ambani",co:{hi:"Reliance 🇮🇳",en:"Reliance 🇮🇳"},usd:89,self:false,immig:false,origin:{hi:"पिता ने ₹500 से शुरू की",en:"Father started with ₹500"}},
+ {r:24,nm:"Giancarlo Devasini",co:{hi:"Tether · crypto",en:"Tether · crypto"},usd:89,self:true,immig:false,origin:{hi:"doctor की नौकरी छोड़कर tech में आए",en:"Left medicine for tech"}},
+ {r:25,nm:"Julia Koch",co:{hi:"Koch Industries",en:"Koch Industries"},usd:81,self:false,immig:false,origin:{hi:"विरासत — Koch परिवार",en:"Heir — Koch family"}},
+];
+
+const STORIES = {
+ dhirubhai:{
+  tag:{hi:"पेट्रोल पंप से ₹17 लाख करोड़ की कंपनी तक",en:"From petrol pump to a ₹17 lakh crore company"},
+  nm:{hi:"धीरूभाई अंबानी",en:"Dhirubhai Ambani"},
+  meta:{hi:"Reliance के संस्थापक · 3 मिनट",en:"Founder, Reliance · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","गुजरात के चोरवाड़ गाँव में एक school teacher का बेटा। 16 साल की उम्र में पढ़ाई छोड़कर यमन के अदन शहर गए — वहाँ पेट्रोल पंप पर काम किया, महीने के ₹300। शाम को गिरजाघर के पास चाय-पकौड़े का ठेला भी लगाया।"],
+   ["पहला कदम","1958 में मुंबई लौटे — जेब में लगभग ₹500 और एक भरोसा। एक किराए के कमरे से मसालों और धागे (yarn) का व्यापार शुरू किया। office में एक मेज़, तीन कुर्सियाँ और एक telephone था — वो भी shared।"],
+   ["असफलता","शुरुआती सालों में यार्न के बाज़ार में बड़े व्यापारियों ने उन्हें गिराने की पूरी कोशिश की। एक बार पूरा बाज़ार उनके ख़िलाफ़ खड़ा हो गया — कीमतें गिराकर उन्हें दिवालिया करने की चाल चली गई। धीरूभाई डटे रहे और अपने वादे पूरे किए।"],
+   ["मोड़","असली क्रांति 1977 में आई: banks ने पैसा नहीं दिया तो धीरूभाई सीधे जनता के पास गए। Reliance का IPO लाए और आम गुजराती परिवारों को shareholder बनाया। भारत में 'equity culture' — आम आदमी का शेयर बाज़ार में भरोसा — धीरूभाई की देन है।"]],
+   en:[["The starting point","Son of a village school teacher in Chorwad, Gujarat. He left school at 16 and sailed to Aden, Yemen — where he worked at a petrol pump for about ₹300 a month, and ran a tea-and-snacks stall in the evenings."],
+   ["The first move","He returned to Mumbai in 1958 with roughly ₹500 and one conviction. From a rented room he began trading spices, then yarn. The office had one table, three chairs and a shared telephone."],
+   ["The failure","In his early yarn-trading years, established traders tried to crush him — at one point the market colluded to drive prices against him and bankrupt him. He held his positions and honoured every commitment, which built his reputation."],
+   ["The turning point","The revolution came in 1977: when banks wouldn't fund him, Dhirubhai went straight to the people. Reliance's IPO turned ordinary Gujarati families into shareholders — he effectively created India's equity culture, the common person's trust in the stock market."]]},
+  lesson:{hi:"सबक: पूँजी नहीं है तो भरोसा बनाइए — धीरूभाई ने bank की जगह जनता से पैसा जुटाया। आज आपके पास Mudra loan (₹10 लाख तक, बिना guarantee) जैसे रास्ते हैं जो उनके पास नहीं थे। 'आपकी बारी' tab देखें।",
+        en:"The lesson: if you lack capital, build trust — Dhirubhai raised money from ordinary people when banks refused. Today you have routes he never did, like Mudra loans up to ₹10 lakh with no collateral. See the 'Your turn' tab."}},
+ damani:{
+  tag:{hi:"पहली दुकान 47 की उम्र में",en:"First store at 47"},
+  nm:{hi:"राधाकिशन दमानी",en:"Radhakishan Damani"},
+  meta:{hi:"DMart के संस्थापक · 3 मिनट",en:"Founder, DMart · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","मुंबई के एक कमरे के flat में पले-बढ़े। college बीच में छोड़ दिया। ball-bearing का छोटा धंधा किया — चला नहीं। 32 की उम्र में पिता के निधन के बाद मजबूरी में शेयर बाज़ार में उतरे।"],
+   ["पहला कदम","बाज़ार में उन्होंने सीखने पर सालों लगाए — कम बोलना, ज़्यादा पढ़ना, सस्ता खरीदना और सब्र रखना। 1990 के दशक तक वे भारत के सबसे कामयाब investors में गिने जाने लगे। पर उनके मन में एक सवाल था: असली धंधा कैसा होता है?"],
+   ["असफलता","जवाब खोजने के लिए 1999 में एक franchise store चलाकर देखा — मॉडल पसंद नहीं आया। ज़्यादातर लोग 45 के बाद नया सीखना बंद कर देते हैं; दमानी ने पूरा retail खुद सीखा।"],
+   ["मोड़","2002 में, लगभग 47 की उम्र में, मुंबई के पवई में पहला DMart खोला। सिद्धांत सादा था: 'रोज़ सस्ता', दुकान किराए पर नहीं — ख़रीदकर, और धीमी लेकिन पक्की बढ़त। आज 500+ stores, और शेयर बाज़ार वाले 'बाज़ार के राजा' को 'retail का राजा' कहते हैं।"]],
+   en:[["The starting point","He grew up in a one-room Mumbai flat and dropped out of college. A small ball-bearing business failed. At 32, after his father's death, he entered the stock market out of necessity."],
+   ["The first move","He spent years learning the market — speak little, read a lot, buy cheap, be patient. By the 1990s he was among India's most successful investors. But one question stayed with him: what does a real business feel like?"],
+   ["The failure","To find out, he ran a franchise store in 1999 — and disliked the model. Most people stop learning new trades after 45; Damani taught himself retail from scratch."],
+   ["The turning point","In 2002, at about 47, he opened the first DMart in Powai, Mumbai. The principles were plain: everyday low prices, own the property instead of renting, grow slowly but surely. Today there are 500+ stores, and the man they called the king of the market became the king of retail."]]},
+  lesson:{hi:"सबक: उम्र deadline नहीं है। दमानी ने अपनी दूसरी पारी 47 पर शुरू की — और सादगी को ही strategy बनाया।",
+        en:"The lesson: age is not a deadline. Damani began his second innings at 47 — and made simplicity itself the strategy."}},
+ nadar:{
+  tag:{hi:"तमिलनाडु के गाँव से global IT साम्राज्य",en:"From a Tamil Nadu village to a global IT empire"},
+  nm:{hi:"शिव नादर",en:"Shiv Nadar"},
+  meta:{hi:"HCL के संस्थापक · 3 मिनट",en:"Founder, HCL · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","1945 में तमिलनाडु के मूलैपोझी गाँव में जन्म। पढ़ाई के लिए शहर आए, engineering की और 1967 में पुणे की एक कंपनी में नौकरी शुरू की — जैसे लाखों middle-class युवा करते हैं।"],
+   ["पहला कदम","1976 में नौकरी छोड़ी। 7 दोस्तों के साथ मिलकर कुल ₹1,87,000 जोड़े और calculator बनाने की कंपनी शुरू की। नाम रखा HCL। तब भारत में 'computer' शब्द भी नया था।"],
+   ["असफलता","सबसे बड़ा झटका तब लगा जब IBM ने 1977 में भारत छोड़ा और बाज़ार खाली हुआ — मौक़ा बड़ा था पर पूँजी नहीं थी। सरकार की पाबंदियाँ, import की दिक्कतें — HCL ने hardware में सालों संघर्ष किया।"],
+   ["मोड़","नादर ने देखा कि असली भविष्य hardware नहीं, software services में है। 1990 के दशक में HCL Technologies बनी और दुनिया भर की कंपनियों के लिए काम शुरू किया। आज HCL Tech ₹3 लाख करोड़+ की कंपनी है — और नादर भारत के सबसे बड़े दानवीर, शिक्षा पर हज़ारों करोड़ देने वाले।"]],
+   en:[["The starting point","Born in 1945 in Moolaipozhi village, Tamil Nadu. He moved to the city to study engineering, and in 1967 took a job at a Pune firm — like millions of middle-class young people do."],
+   ["The first move","In 1976 he quit. With seven friends he pooled ₹1,87,000 and started a calculator company called HCL — at a time when 'computer' was barely a word in India."],
+   ["The failure","When IBM exited India in 1977 the market opened up — a huge opportunity, but capital was scarce. Licence-raj restrictions and import hurdles meant HCL fought for years in hardware."],
+   ["The turning point","Nadar saw the future was software services, not hardware. HCL Technologies was born in the 1990s and began serving companies worldwide. Today it is a ₹3 lakh crore+ company — and Nadar is India's biggest philanthropist, giving thousands of crores to education."]]},
+  lesson:{hi:"सबक: साझेदारी ताक़त है। नादर अकेले नहीं थे — 8 दोस्तों की छोटी-छोटी बचत ने मिलकर इतिहास बनाया।",
+        en:"The lesson: partnership is power. Nadar wasn't alone — the pooled savings of eight friends made history together."}},
+ shanghvi:{
+  tag:{hi:"पिता से $200 उधार, आज ₹4 लाख करोड़ की कंपनी",en:"$200 from his father, now a ₹4 lakh crore company"},
+  nm:{hi:"दिलीप सांघवी",en:"Dilip Shanghvi"},
+  meta:{hi:"Sun Pharma के संस्थापक · 3 मिनट",en:"Founder, Sun Pharma · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","कोलकाता में दवा distributor के बेटे। पिता की छोटी सी दुकान में दवाइयों के डिब्बे गिनते हुए बड़े हुए। कोई MBA नहीं, कोई विदेशी degree नहीं।"],
+   ["पहला कदम","1983 में पिता से लगभग $200 (तब क़रीब ₹2,000) उधार लेकर गुजरात के वापी में Sun Pharma शुरू की — सिर्फ़ 5 psychiatry की दवाओं के साथ। मानसिक रोग की दवाएँ — वो क्षेत्र जिसे बड़ी कंपनियाँ छोटा समझती थीं।"],
+   ["असफलता","रास्ता आसान नहीं रहा — 2014 में scandal में फँसी Ranbaxy को $4 अरब में खरीदा तो सबने पागलपन कहा। सालों तक उसकी सफ़ाई और सुधार में लगे रहे; शेयर गिरा, आलोचना हुई।"],
+   ["मोड़","धैर्य रंग लाया। उनका मंत्र खुद उनके शब्दों में: 'हमारी कहानी छोटे-छोटे क़दमों की है — हम बड़ी छलांग नहीं, छोटी छलांगें पसंद करते हैं।' आज Sun Pharma भारत की सबसे बड़ी दवा कंपनी है, दुनिया के 100+ देशों में।"]],
+   en:[["The starting point","Son of a Kolkata medicine distributor. He grew up counting medicine boxes in his father's small shop. No MBA, no foreign degree."],
+   ["The first move","In 1983 he borrowed about $200 from his father and started Sun Pharma in Vapi, Gujarat — with just five psychiatry drugs. Mental-health medicines: the niche big firms thought too small."],
+   ["The failure","The road wasn't smooth — when he bought scandal-hit Ranbaxy for $4 billion in 2014, many called it madness. Years of clean-up followed; the stock fell, critics circled."],
+   ["The turning point","Patience paid. His own words are the method: 'Our story is all about incremental growth. We're not looking for big leaps; we prefer small jumps.' Today Sun Pharma is India's most valuable drug maker, selling in 100+ countries."]]},
+  lesson:{hi:"सबक: छोटा niche चुनिए जिसे बड़े खिलाड़ी नज़रअंदाज़ करते हैं — और छोटी छलांगें लगाते रहिए।",
+        en:"The lesson: pick the niche the big players ignore — and keep making small jumps."}},
+ mittal:{
+  tag:{hi:"साइकिल पार्ट्स से 49 करोड़ ग्राहकों तक",en:"From cycle parts to 490 million customers"},
+  nm:{hi:"सुनील भारती मित्तल",en:"Sunil Bharti Mittal"},
+  meta:{hi:"Airtel के संस्थापक · 3 मिनट",en:"Founder, Airtel · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","लुधियाना, पंजाब। 18 साल की उम्र में पिता से ₹20,000 उधार लेकर 1976 में पहला धंधा शुरू किया — साइकिल के crankshaft बनाना।"],
+   ["पहला कदम","साइकिल पार्ट्स से आगे बढ़कर generators का import शुरू किया — धंधा चल निकला। मेहनत रंग ला रही थी।"],
+   ["असफलता","फिर 1983 में एक ही झटके में सब खत्म: सरकार ने generators के import पर ban लगा दिया। रातों-रात पूरा कारोबार शून्य। ज़्यादातर लोग यहीं टूट जाते।"],
+   ["मोड़","मित्तल ने नए मौक़े खोजे — पहले push-button phones, फिर 1992 में सबसे बड़ा दाँव: mobile license की बोली। 1995 में Airtel शुरू हुई। आज Airtel 18 देशों में 49 करोड़ ग्राहकों को जोड़ती है। जो ban बर्बादी लगा था, वही सबसे बड़े मौक़े का दरवाज़ा निकला।"]],
+   en:[["The starting point","Ludhiana, Punjab. At 18 he borrowed ₹20,000 from his father and started his first venture in 1976 — making crankshafts for bicycles."],
+   ["The first move","From cycle parts he moved into importing generators — and the business took off. The hustle was paying."],
+   ["The failure","Then in 1983 it ended in one stroke: the government banned generator imports. Overnight, the entire business went to zero. Most people would have broken here."],
+   ["The turning point","Mittal hunted for the next opening — push-button phones first, then in 1992 the biggest bet of his life: bidding for a mobile licence. Airtel launched in 1995. Today it connects some 490 million customers across 18 countries. The ban that looked like ruin turned out to be the door to the biggest opportunity."]]},
+  lesson:{hi:"सबक: धंधा ख़त्म हो सकता है, entrepreneur नहीं। हर ban, हर बदलाव में अगला दरवाज़ा छिपा है।",
+        en:"The lesson: a business can die; an entrepreneur doesn't. Inside every ban and every disruption hides the next door."}},
+ karsanbhai:{
+  tag:{hi:"साइकिल पर ₹3 का पैकेट — और एक साम्राज्य",en:"A ₹3 packet on a bicycle — and an empire"},
+  nm:{hi:"करसनभाई पटेल",en:"Karsanbhai Patel"},
+  meta:{hi:"Nirma के संस्थापक · 3 मिनट",en:"Founder, Nirma · 3 min read"},
+  beats:{
+   hi:[["शुरुआत","गुजरात के किसान परिवार का बेटा। सरकारी lab में chemist की नौकरी — तनख्वाह मामूली, सपने बड़े।"],
+   ["पहला कदम","1969 में घर के पिछवाड़े में हाथ से detergent powder बनाना शुरू किया। सुबह नौकरी से पहले, साइकिल पर घर-घर जाकर बेचते — ₹3 प्रति किलो, जब Surf ₹13 का था। पैकेट पर बेटी निरुपमा का नाम: Nirma।"],
+   ["असफलता","बड़ी कंपनियों ने उन्हें गंभीरता से नहीं लिया — और यही उनकी ढाल बनी। पर दुकानदार माल रखने को तैयार नहीं थे; उधारी और वापसी का जोखिम था। करसनभाई ने पहले ग्राहक की माँग बनाई, फिर दुकानों में entry ली।"],
+   ["मोड़","'दूध सी सफेदी निरमा से आए' — यह jingle घर-घर पहुँचा और middle-class भारत ने अपना detergent चुन लिया। 1980 के दशक में Nirma ने बहुराष्ट्रीय दिग्गजों को पीछे छोड़ा। एक chemist की साइकिल पूरे बाज़ार से तेज़ निकली।"]],
+   en:[["The starting point","A farmer's son from Gujarat, working as a chemist in a government lab — small salary, big dreams."],
+   ["The first move","In 1969 he began making detergent powder by hand in his backyard. Before work each morning he sold it door-to-door on his bicycle — ₹3 a kilo when Surf cost ₹13. On the packet, his daughter Nirupama's name: Nirma."],
+   ["The failure","The big companies didn't take him seriously — which became his shield. But shopkeepers wouldn't stock an unknown brand. So Karsanbhai built customer demand first, and let the shops come to him."],
+   ["The turning point","The jingle 'Doodh si safedi Nirma se aaye' reached every home, and middle-class India chose its own detergent. Through the 1980s Nirma outsold multinational giants. One chemist's bicycle outran the entire market."]]},
+  lesson:{hi:"सबक: सस्ता बेचना strategy हो सकती है, शर्म नहीं — अगर quality पक्की हो। और ग्राहक की माँग सबसे बड़ी distribution है।",
+        en:"The lesson: selling cheap can be a strategy, not a shame — if the quality holds. And customer demand is the greatest distribution network."}},
+};
+
+/* ============ I18N ============ */
+const I18N = {
+ hi:{heroTitle:'वो भी वहीं से शुरू हुए थे,<br><span class="gold">जहाँ आप आज हैं।</span>',
+  heroSub:'भारत और दुनिया के सबसे अमीर लोगों की ताज़ा सूची — और हर दौलत के पीछे की असली कहानी।',
+  liveLine:'45 अरबपति · रोज़ अपडेट · BSE/NSE + Forbes data',
+  tabIndia:'🇮🇳 भारत Top 20',tabWorld:'🌏 दुनिया Top 25',tabStories:'चप्पल से जहाज़',tabTurn:'आपकी बारी',
+  indiaH:'भारत की अमीर सूची',indiaSub:'BSE/NSE promoter filings × आज के market caps से हमारा अपना अनुमान।',
+  worldH:'दुनिया की अमीर सूची',worldSub:'Forbes Billionaires data (जुलाई 2026) पर आधारित, attribution के साथ।',
+  storiesH:'चप्पल से जहाज़',storiesSub:'चप्पल से जहाज़ तक का सफ़र — महल की नहीं, संघर्ष की कहानियाँ। हर कहानी 3 मिनट में।',
+  turnH:'आपकी बारी',turnSub:'कहानियाँ पढ़ीं? अब पहला कदम। ये सरकारी और मुफ़्त resources आज आपके लिए मौजूद हैं।',
+  updated:'3 जुलाई 2026 को अपडेट',updated2:'जुलाई 2026 data',
+  fAll:'सभी',fSelf:'Zero से शुरू',fVer:'✓ Verified data',fAll2:'सभी',fSelf2:'Self-made',fImmig:'Immigrant / बाहर से आए',
+  r1h:'Mudra Loan — बिना guarantee ₹10 लाख तक',r1p:'छोटा business शुरू करने के लिए सरकारी loan योजना (शिशु/किशोर/तरुण)। किसी भी बैंक में आवेदन करें।',
+  r2h:'Startup India — registration और tax छूट',r2p:'अपने startup को register करें, 3 साल की tax छूट और funding support पाएँ।',
+  r3h:'Skill India — मुफ़्त skill training',r3p:'PMKVY के तहत सैकड़ों trades में free training और certificate।',
+  r4h:'Stand-Up India — महिलाओं और SC/ST के लिए',r4p:'नई इकाई शुरू करने के लिए ₹10 लाख से ₹1 करोड़ तक का bank loan।',
+  ftag:'कहानियाँ उनकी, जो वहीं से शुरू हुए जहाँ आप हैं।',
+  fdisc:'भारत सूची: अनुमान = listed promoter हिस्सा × market cap (BSE/NSE filings)। निजी संपत्ति, कर्ज़ और pledged shares शामिल नहीं। "est." वाली entries launch से पहले verify होंगी। विश्व सूची: Forbes Billionaires data, जुलाई 2026। यह निवेश सलाह नहीं है।',
+  lcr:'लाख करोड़',story:'कहानी पढ़ें',read:'पूरी कहानी पढ़ें (3 min) →',lesson:'आपके लिए सबक'},
+ en:{heroTitle:'They started exactly<br><span class="gold">where you are today.</span>',
+  heroSub:'A daily-updated rich list of India and the world — and the real story behind every fortune.',
+  liveLine:'45 billionaires · updated daily · BSE/NSE + Forbes data',
+  tabIndia:'🇮🇳 India Top 20',tabWorld:'🌏 World Top 25',tabStories:'Chappal se Jahaz',tabTurn:'Your turn',
+  indiaH:'The India rich list',indiaSub:'Our own estimates from BSE/NSE promoter filings × today\u2019s market caps.',
+  worldH:'The world rich list',worldSub:'Based on Forbes Billionaires data (July 2026), with attribution.',
+  storiesH:'Chappal se Jahaz',storiesSub:'The journey from rubber slippers to jets — not the palaces, the struggle. Every story in 3 minutes.',
+  turnH:'Your turn',turnSub:'Read the stories? Now the first step. These free government resources exist for you today.',
+  updated:'Updated 3 July 2026',updated2:'July 2026 data',
+  fAll:'All',fSelf:'Started from zero',fVer:'✓ Verified data',fAll2:'All',fSelf2:'Self-made',fImmig:'Immigrants',
+  r1h:'Mudra Loan — up to ₹10 lakh, no collateral',r1p:'Government loan scheme (Shishu/Kishore/Tarun) to start a small business. Apply at any bank.',
+  r2h:'Startup India — registration & tax breaks',r2p:'Register your startup, get a 3-year tax holiday and funding support.',
+  r3h:'Skill India — free skill training',r3p:'Free training and certification in hundreds of trades under PMKVY.',
+  r4h:'Stand-Up India — for women and SC/ST founders',r4p:'Bank loans from ₹10 lakh to ₹1 crore for new enterprises.',
+  ftag:'Stories of those who started where you are.',
+  fdisc:'India list: estimates = listed promoter stake × market cap (BSE/NSE filings). Excludes private assets, debt and pledged shares. Entries marked "est." will be verified before launch. World list: Forbes Billionaires data, July 2026. This is not investment advice.',
+  lcr:'lakh crore',story:'Read the story',read:'Read the full story (3 min) →',lesson:'Your takeaway'}
+};
+
+/* ============ RENDER ============ */
+let LANG='hi';
+const fmt=n=>n.toLocaleString('en-IN');
+function steps(v,max){const n=5,h=[4,7,10,13,16];const lvl=Math.max(1,Math.ceil((v/max)*n));
+  let s='';for(let i=0;i<n;i++){s+=`<i style="height:${h[i]}px;opacity:${i<lvl?1:.18}"></i>`}return`<span class="steps" aria-hidden="true">${s}</span>`}
+
+function fmtWorth(lcr){
+ if(lcr>=1)return`₹${lcr.toFixed(2)} ${LANG==='hi'?'लाख Cr':'L Cr'}`;
+ return`₹${Math.round(lcr*1e5).toLocaleString('en-IN')} Cr`}
+
+function rowIndia(b,max){
+ const t=I18N[LANG];
+ return`<div class="row" data-self="${b.self}" data-ver="${b.verified}">
+  <div class="rankbox"><span class="rank">${b.r}</span>${steps(b.lcr,max)}</div>
+  <div class="who"><div class="nm">${b.nm[LANG]}</div><div class="co">${b.co[LANG]}</div>
+   <span class="origin">${b.origin[LANG]}</span>${b.verified?'':'<span class="est">est.</span>'}</div>
+  <div class="worth"><div class="v">${fmtWorth(b.lcr)}</div><div class="u">~$${b.usd} bn</div></div>
+  ${b.story?`<button class="storybtn" onclick="openStory('${b.story}')">${t.story} →</button>`:''}</div>`}
+
+function rowWorld(b,max){
+ return`<div class="row" data-self="${b.self}" data-immig="${b.immig}">
+  <div class="rankbox"><span class="rank">${b.r}</span>${steps(b.usd,max)}</div>
+  <div class="who"><div class="nm">${b.nm}</div><div class="co">${b.co[LANG]}</div>
+   <span class="origin">${b.origin[LANG]}</span></div>
+  <div class="worth"><div class="v">$${fmt(b.usd)} bn</div><div class="u">${b.self?(LANG==='hi'?'self-made':'self-made'):(LANG==='hi'?'विरासत':'inherited')}</div></div></div>`}
+
+function renderLists(){
+ const maxI=Math.max(...INDIA.map(b=>b.lcr)),maxW=Math.max(...WORLD.map(b=>b.usd));
+ document.getElementById('list-india').innerHTML=INDIA.map(b=>rowIndia(b,maxI)).join('');
+ document.getElementById('list-world').innerHTML=WORLD.map(b=>rowWorld(b,maxW)).join('');
+ applyFilter('india');applyFilter('world');
+ const t=I18N[LANG];
+ document.getElementById('list-stories').innerHTML=Object.entries(STORIES).map(([k,s])=>
+  `<div class="scard" onclick="openStory('${k}')">
+    <span class="tag">${s.tag[LANG]}</span><h3>${s.nm[LANG]}</h3>
+    <p>${s.beats[LANG][0][1].slice(0,110)}…</p><span class="read">${t.read}</span></div>`).join('');
+}
+
+/* filters */
+let FILT={india:'all',world:'all'};
+document.querySelectorAll('.chips').forEach(c=>{
+ c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  c.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  FILT[c.id.replace('chips-','')]=b.dataset.f;applyFilter(c.id.replace('chips-',''))})});
+function applyFilter(which){
+ const f=FILT[which];
+ document.querySelectorAll(`#list-${which} .row`).forEach(r=>{
+  let show=true;
+  if(f==='self')show=r.dataset.self==='true';
+  if(f==='verified')show=r.dataset.ver==='true';
+  if(f==='immig')show=r.dataset.immig==='true';
+  r.style.display=show?'grid':'none'})}
+
+/* tabs */
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('nav.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ document.querySelectorAll('main section').forEach(s=>s.classList.remove('on'));
+ document.getElementById(b.dataset.tab).classList.add('on');window.scrollTo({top:0})}));
+
+/* story overlay */
+function openStory(k){
+ const s=STORIES[k],t=I18N[LANG];
+ document.getElementById('panel').innerHTML=
+  `<button class="close" onclick="closeStory()" aria-label="Close">✕</button>
+   <span class="tag">${s.tag[LANG]}</span><h3>${s.nm[LANG]}</h3><div class="meta">${s.meta[LANG]}</div>`+
+  s.beats[LANG].map(b=>`<div class="beat"><div class="bt">${b[0]}</div><p>${b[1]}</p></div>`).join('')+
+  `<div class="lesson"><div class="bt">${t.lesson}</div><p>${s.lesson[LANG]}</p></div>`;
+ document.getElementById('overlay').classList.add('on');document.body.style.overflow='hidden'}
+function closeStory(){document.getElementById('overlay').classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeStory()});
+
+/* language */
+function setLang(l){LANG=l;
+ document.documentElement.lang=l;
+ document.getElementById('btn-hi').classList.toggle('on',l==='hi');
+ document.getElementById('btn-en').classList.toggle('on',l==='en');
+ const t=I18N[l];
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(t[k]!==undefined)el.innerHTML=t[k]});
+ renderLists()}
+
+renderLists();
+
+/* daily data: fetch data.json (written by update_data.py); fall back silently to embedded values */
+fetch('data.json').then(r=>r.ok?r.json():null).then(j=>{
+ if(!j)return;
+ Object.entries(j.india||{}).forEach(([key,v])=>{
+  const b=INDIA.find(x=>x.nm.en===key);
+  if(b){b.lcr=v.lcr;b.usd=v.usd;}});
+ INDIA.sort((a,b)=>b.lcr-a.lcr).forEach((b,i)=>b.r=i+1);
+ if(j.updated_hi)I18N.hi.updated=j.updated_hi;
+ if(j.updated_en)I18N.en.updated=j.updated_en;
+ setLang(LANG);
+}).catch(()=>{});
+</script>
+</body>
+</html>
