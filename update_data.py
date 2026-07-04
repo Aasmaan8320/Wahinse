@@ -63,27 +63,31 @@ HINDI_MONTHS = ["जनवरी","फ़रवरी","मार्च","अप
                 "जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"]
 
 
-def fetch_live(tickers):
+def fetch_live(engine):
     import yfinance as yf
-    caps = {}
-    for t in tickers:
-        caps[t] = yf.Ticker(t).fast_info["market_cap"] / 1e7   # rupees -> crore
-    fx = float(yf.Ticker("USDINR=X").fast_info["last_price"])
+    caps, misses = {}, []
+    for e in engine:
+        for h in e["holdings"]:
+            t = h["ticker"]
+            try:
+                caps[t] = yf.Ticker(t).fast_info["market_cap"] / 1e7   # rupees -> crore
+            except Exception:
+                caps[t] = h["fb_mcap_cr"]; misses.append(t)
+    try:
+        fx = float(yf.Ticker("USDINR=X").fast_info["last_price"])
+    except Exception:
+        fx = USD_INR_FALLBACK; misses.append("USDINR=X")
+    if misses:
+        print(f"[warn] fallback used for: {', '.join(misses)}", file=sys.stderr)
     return caps, fx
 
 
 def main():
-    tickers = [h["ticker"] for e in ENGINE for h in e["holdings"]]
     if OFFLINE:
         caps = {h["ticker"]: h["fb_mcap_cr"] for e in ENGINE for h in e["holdings"]}
         fx, mode = USD_INR_FALLBACK, "offline"
     else:
-        try:
-            caps, fx = fetch_live(tickers); mode = "live"
-        except Exception as err:
-            print(f"[warn] live fetch failed ({err}); using fallbacks", file=sys.stderr)
-            caps = {h["ticker"]: h["fb_mcap_cr"] for e in ENGINE for h in e["holdings"]}
-            fx, mode = USD_INR_FALLBACK, "fallback after error"
+        caps, fx = fetch_live(ENGINE); mode = "live (per-ticker fallback on misses)"
 
     india = {}
     for e in ENGINE:
@@ -102,18 +106,22 @@ def main():
         wcaps = {h["ticker"]: h["fb"] for e in WORLD_ENGINE for h in e["holdings"]}
         eurusd = EURUSD_FALLBACK
     else:
-        try:
-            import yfinance as yf
-            wcaps = {}
-            for e in WORLD_ENGINE:
-                for h in e["holdings"]:
+        import yfinance as yf
+        wcaps, wmiss = {}, []
+        for e in WORLD_ENGINE:
+            for h in e["holdings"]:
+                if h["ticker"] in wcaps: continue
+                try:
                     mc = yf.Ticker(h["ticker"]).fast_info["market_cap"]
                     wcaps[h["ticker"]] = mc/1e7 if h["ccy"]=="INR" else mc/1e9
+                except Exception:
+                    wcaps[h["ticker"]] = h["fb"]; wmiss.append(h["ticker"])
+        try:
             eurusd = float(yf.Ticker("EURUSD=X").fast_info["last_price"])
-        except Exception as err:
-            print(f"[warn] world fetch failed ({err}); using fallbacks", file=sys.stderr)
-            wcaps = {h["ticker"]: h["fb"] for e in WORLD_ENGINE for h in e["holdings"]}
-            eurusd = EURUSD_FALLBACK
+        except Exception:
+            eurusd = EURUSD_FALLBACK; wmiss.append("EURUSD=X")
+        if wmiss:
+            print(f"[warn] world fallback used for: {', '.join(wmiss)}", file=sys.stderr)
     world = {}
     for e in WORLD_ENGINE:
         usd_bn = 0.0
