@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wahinse.com/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%231B2A4A'/%3E%3Ctext x='32' y='44' font-size='34' font-family='serif' fill='%23E3A82B' text-anchor='middle'%3E%E0%A4%B5%3C/text%3E%3C/svg%3E">
-<script data-goatcounter="https://wahinse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://wahin-se.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
@@ -277,17 +277,17 @@ const INDIA = [
 ];
 
 const WORLD = [
- {r:1,nm:"Elon Musk",live:true,co:{hi:"Tesla, SpaceX",en:"Tesla, SpaceX"},usd:970,self:true,immig:true,origin:{hi:"12 की उम्र में game बेचा, 17 पर घर छोड़ा",en:"Sold a game at 12, left home at 17"}},
+ {r:1,nm:"Elon Musk",story:"musk",live:true,co:{hi:"Tesla, SpaceX",en:"Tesla, SpaceX"},usd:970,self:true,immig:true,origin:{hi:"12 की उम्र में game बेचा, 17 पर घर छोड़ा",en:"Sold a game at 12, left home at 17"}},
  {r:2,nm:"Larry Page",co:{hi:"Google",en:"Google"},usd:290,self:true,immig:false,origin:{hi:"hostel के कमरे से Google शुरू",en:"Started Google from a dorm project"}},
- {r:3,nm:"Sergey Brin",co:{hi:"Google",en:"Google"},usd:270,self:true,immig:true,origin:{hi:"6 साल की उम्र में शरणार्थी बनकर आए",en:"Arrived as an immigrant at 6"}},
+ {r:3,nm:"Sergey Brin",story:"brin",co:{hi:"Google",en:"Google"},usd:270,self:true,immig:true,origin:{hi:"6 साल की उम्र में शरणार्थी बनकर आए",en:"Arrived as an immigrant at 6"}},
  {r:4,nm:"Jeff Bezos",live:true,co:{hi:"Amazon",en:"Amazon"},usd:253,self:true,immig:false,origin:{hi:"garage से किताबें बेचना शुरू किया",en:"Started selling books from a garage"}},
  {r:5,nm:"Michael Dell",co:{hi:"Dell Technologies",en:"Dell Technologies"},usd:219,self:true,immig:false,origin:{hi:"hostel के कमरे में computer जोड़े",en:"Assembled PCs in his dorm room"}},
  {r:6,nm:"Mark Zuckerberg",live:true,co:{hi:"Meta / Facebook",en:"Meta / Facebook"},usd:200,self:true,immig:false,origin:{hi:"19 की उम्र में hostel से शुरुआत",en:"Started from a dorm at 19"}},
  {r:7,nm:"Larry Ellison",live:true,co:{hi:"Oracle",en:"Oracle"},usd:183,self:true,immig:false,origin:{hi:"college छोड़ा, माँ ने अकेले पाला",en:"College dropout, raised by single mother"}},
- {r:8,nm:"Jensen Huang",live:true,co:{hi:"Nvidia",en:"Nvidia"},usd:167,self:true,immig:true,origin:{hi:"restaurant में बर्तन धोए",en:"Washed dishes at a diner"}},
+ {r:8,nm:"Jensen Huang",story:"huang",live:true,co:{hi:"Nvidia",en:"Nvidia"},usd:167,self:true,immig:true,origin:{hi:"restaurant में बर्तन धोए",en:"Washed dishes at a diner"}},
  {r:9,nm:"Bernard Arnault",live:true,co:{hi:"LVMH · luxury",en:"LVMH · luxury"},usd:152,self:false,immig:false,origin:{hi:"पिता की construction कंपनी से शुरुआत",en:"Began in father's construction firm"}},
- {r:10,nm:"Warren Buffett",co:{hi:"Berkshire Hathaway",en:"Berkshire Hathaway"},usd:149,self:true,immig:false,origin:{hi:"बचपन में अख़बार बाँटे, chewing gum बेची",en:"Delivered papers, sold gum as a kid"}},
- {r:11,nm:"Amancio Ortega",co:{hi:"Zara / Inditex",en:"Zara / Inditex"},usd:143,self:true,immig:false,origin:{hi:"14 की उम्र में दुकान का छोटा helper",en:"Shop hand at 14"}},
+ {r:10,nm:"Warren Buffett",story:"buffett",co:{hi:"Berkshire Hathaway",en:"Berkshire Hathaway"},usd:149,self:true,immig:false,origin:{hi:"बचपन में अख़बार बाँटे, chewing gum बेची",en:"Delivered papers, sold gum as a kid"}},
+ {r:11,nm:"Amancio Ortega",story:"ortega",co:{hi:"Zara / Inditex",en:"Zara / Inditex"},usd:143,self:true,immig:false,origin:{hi:"14 की उम्र में दुकान का छोटा helper",en:"Shop hand at 14"}},
  {r:12,nm:"Rob Walton",co:{hi:"Walmart",en:"Walmart"},usd:132,self:false,immig:false,origin:{hi:"विरासत — पिता Sam Walton",en:"Heir — father Sam Walton"}},
  {r:13,nm:"Jim Walton",co:{hi:"Walmart",en:"Walmart"},usd:129,self:false,immig:false,origin:{hi:"विरासत — Walton परिवार",en:"Heir — Walton family"}},
  {r:14,nm:"Steve Ballmer",co:{hi:"Microsoft",en:"Microsoft"},usd:125,self:true,immig:false,origin:{hi:"employee नंबर 30 — नौकरी से अरबपति",en:"Employee no. 30 — billionaire by salary & stock"}},
@@ -305,6 +305,11 @@ const WORLD = [
 ];
 
 const PORTRAITS={
+ musk:{bg:'#26324A',skin:'#EAC9A8',cloth:'#1E1E1E',hair:'<path d="M24 26c1-8 6-13 12-13s11 5 12 13c-1-4-6-5-12-5s-11 1-12 5z" fill="#4A3B2A"/>'},
+ huang:{bg:'#173026',skin:'#EFD3A8',cloth:'#141414',hair:'<path d="M24 27c0-8 5-13 12-13s12 5 12 13c0-3-5-5-12-5s-12 2-12 5z" fill="#2A2A2A"/>',extra:'<g stroke="#2A2A2A" stroke-width="1.5" fill="none"><circle cx="30" cy="29" r="4.5"/><circle cx="42" cy="29" r="4.5"/><line x1="34.5" y1="29" x2="37.5" y2="29"/></g>'},
+ ortega:{bg:'#3E3A5C',skin:'#EAC9A8',cloth:'#6B8CAE',hair:'<path d="M25 26c0-7 5-12 11-12s11 5 11 12c0-3-5-5-11-5s-11 2-11 5z" fill="#D8D8D8"/>'},
+ brin:{bg:'#233F63',skin:'#EAC9A8',cloth:'#3E5C50',hair:'<path d="M24 27c0-8 5-13 12-13s12 5 12 13c0-3-5-5-12-5s-12 2-12 5z" fill="#3A3226"/>'},
+ buffett:{bg:'#4A3226',skin:'#F0D2B2',cloth:'#2C3E66',hair:'<path d="M25 26c0-7 5-12 11-12s11 5 11 12c0-3-5-5-11-5s-11 2-11 5z" fill="#E0E0E0"/>',extra:'<g stroke="#3A3A3A" stroke-width="1.5" fill="none"><circle cx="30" cy="29" r="4.5"/><circle cx="42" cy="29" r="4.5"/><line x1="34.5" y1="29" x2="37.5" y2="29"/></g>'},
  adani:{bg:'#2E4A3A',skin:'#E3BC94',cloth:'#2C3E66',hair:'<path d="M24 27c0-8 5-13 12-13s12 5 12 13c0-3-5-5-12-5s-12 2-12 5z" fill="#4A4A4A"/>',extra:'<g stroke="#3A3A3A" stroke-width="1.5" fill="none"><circle cx="30" cy="29" r="4.5"/><circle cx="42" cy="29" r="4.5"/><line x1="34.5" y1="29" x2="37.5" y2="29"/></g>'},
  jindal:{bg:'#5C3550',skin:'#E3BC94',cloth:'#C0392B',hair:'<path d="M23 27c0-9 6-15 13-15s13 6 13 15c0-4-6-6-13-6s-13 2-13 6z" fill="#B8B8B8"/><path d="M23 27l-1 12c2 2 4 2 6 1l1-10z" fill="#B8B8B8"/><path d="M49 27l1 12c-2 2-4 2-6 1l-1-10z" fill="#B8B8B8"/>',extra:'<circle cx="36" cy="23.5" r="1.3" fill="#8E2A2A"/>'},
  nayar:{bg:'#3D2E5C',skin:'#E9C9A0',cloth:'#3E5C50',hair:'<path d="M23 27c0-9 6-15 13-15s13 6 13 15c0-4-6-6-13-6s-13 2-13 6z" fill="#2E2E2E"/><path d="M23 27l-1 13c2 2 4 2 6 1l1-11z" fill="#2E2E2E"/><path d="M49 27l1 13c-2 2-4 2-6 1l-1-11z" fill="#2E2E2E"/>'},
@@ -321,6 +326,86 @@ function portraitSVG(k,size){const p=PORTRAITS[k];if(!p)return'';
  return `<svg width="${size}" height="${size}" viewBox="0 0 72 72" aria-hidden="true" style="flex-shrink:0"><circle cx="36" cy="36" r="36" fill="${p.bg}"/><circle cx="36" cy="29" r="12" fill="${p.skin}"/><path d="M17 62c0-12 8.5-19 19-19s19 7 19 19z" fill="${p.cloth}"/>${p.hair}${p.extra||''}</svg>`}
 
 const STORIES = {
+ musk:{
+  tag:{hi:"12 पर game बेचा — दुनिया का पहला trillionaire",en:"Sold a game at 12 — the world first trillionaire"},
+  nm:{hi:"एलन मस्क",en:"Elon Musk"},
+  meta:{hi:"Tesla, SpaceX के संस्थापक · 3 मिनट",en:"Founder, Tesla and SpaceX · 3 min read"},
+  quote:{hi:"चौथा launch — आख़िरी पैसा, आख़िरी मौक़ा।",en:"The fourth launch — last money, last chance."},
+  stat:{s_hi:"12 पर game बेचा · $500",s_en:"Sold a game at 12 · $500",t_hi:"$1 trillion+",t_en:"$1 trillion+"},
+  beats:{
+   hi:[["शुरुआत","दक्षिण अफ़्रीका का बचपन — किताबों में डूबा, school में परेशान किया जाता लड़का। 12 की उम्र में ख़ुद code करके एक video game बनाया और $500 में बेच दिया। 17 पर अकेले देश छोड़कर Canada चला गया।"],
+   ["पहला कदम","भाई के साथ पहली internet कंपनी Zip2 बनाई — office में ही सोते थे, एक ही computer पर दिन में website, रात में code। कंपनी बिकी, फिर PayPal बना और बिका। सारा पैसा जेब में था — और उसने लगभग पूरा rockets और electric cars पर लगा दिया।"],
+   ["असफलता","2008 — SpaceX के तीनों launch फेल, Tesla दिवालिया होने के कगार पर, ख़ुद किराए के लिए उधार लेते हुए। दुनिया हँस रही थी। चौथा launch आख़िरी पैसे से हुआ — और सफल रहा। कुछ हफ़्तों में NASA का contract और Tesla की funding आ गई।"],
+   ["मोड़","जून 2026 में SpaceX का IPO इतिहास का सबसे बड़ा IPO बना — और वे दुनिया के पहले trillionaire। rockets वापस उतरते हैं, cars ख़ुद चलती हैं — जो पागलपन लगता था, वो industry बन गया।"]],
+   en:[["The starting point","A childhood in South Africa — a bullied boy buried in books. At 12 he coded a video game and sold it for $500. At 17 he left the country alone for Canada."],
+   ["The first move","With his brother he built his first internet company, Zip2 — sleeping in the office, one computer serving the website by day and compiling code by night. It sold; then PayPal was built and sold. He had a fortune in hand — and bet nearly all of it on rockets and electric cars."],
+   ["The failure","2008 — three SpaceX launches failed, Tesla stood at the edge of bankruptcy, and he was borrowing for rent. The world laughed. The fourth launch flew on the last of the money — and succeeded. Within weeks came the NASA contract and Tesla funding."],
+   ["The turning point","In June 2026 the SpaceX IPO became the largest in history — and he became the world first trillionaire. Rockets land themselves, cars drive themselves: what looked like madness became an industry."]]},
+  lesson:{hi:"बड़े दाँव डरावने होते हैं — पर सबसे बड़ा जोखिम अक्सर कोई जोखिम न लेना है। और असफलता का मतलब अंत नहीं, अगला launch है।",en:"Big bets are terrifying — but the biggest risk is often taking none. And failure is not the end; it is the next launch."}},
+ huang:{
+  tag:{hi:"बर्तन धोने वाला लड़का, दुनिया की सबसे क़ीमती chip कंपनी",en:"The dishwasher who built the world most valuable chipmaker"},
+  nm:{hi:"जेन्सन हुआंग",en:"Jensen Huang"},
+  meta:{hi:"Nvidia के संस्थापक · 3 मिनट",en:"Founder, Nvidia · 3 min read"},
+  quote:{hi:"हम हमेशा दिवालिया होने से 30 दिन दूर हैं — यही डर हथियार बना।",en:"We are always 30 days from going out of business — that fear became the weapon."},
+  stat:{s_hi:"किशोर · Denny's में बर्तन",s_en:"Teenager · dishes at a diner",t_hi:"~$4-5 trillion कंपनी",t_en:"A ~$4-5 trillion company"},
+  beats:{
+   hi:[["शुरुआत","ताइवान में जन्म; 9-10 की उम्र में माता-पिता ने अमेरिका भेज दिया। अनजान देश, टूटी English — teenage में Denny's restaurant में बर्तन धोए, table साफ़ किए। वे आज भी कहते हैं: वहीं मेहनत की आदत बनी।"],
+   ["पहला कदम","1993 में उसी Denny's की एक booth पर दो दोस्तों के साथ बैठकर Nvidia की योजना बनी — graphics chips की कंपनी, जब ये बाज़ार था ही नहीं।"],
+   ["असफलता","शुरुआती chip flop हुई — कंपनी सचमुच बंद होने के कगार पर आ गई। उस दौर से एक सोच जन्मी जो कंपनी का मंत्र बनी: हम हमेशा दिवालिया होने से 30 दिन दूर हैं। फिर उन्होंने वो दाँव खेला जिस पर Wall Street हँसा — chips को सिर्फ़ games नहीं, हर तरह की computing के लिए बनाना।"],
+   ["मोड़","AI की क्रांति आई तो पता चला — पूरी दुनिया को उन्हीं chips की ज़रूरत थी। Nvidia दुनिया की सबसे क़ीमती कंपनियों में पहुँची। बर्तन धोने वाला लड़का आज chip युग का बादशाह है।"]],
+   en:[["The starting point","Born in Taiwan; sent to America at nine or ten. A strange country, broken English — as a teenager he washed dishes and cleared tables at a Denny's diner. He still says the work ethic was built right there."],
+   ["The first move","In 1993, at a booth in that same Denny's chain, he and two friends sketched out Nvidia — a graphics-chip company, in a market that barely existed."],
+   ["The failure","An early chip flopped — the company came genuinely close to shutting down. From that era came the line that became its motto: we are always 30 days from going out of business. Then he made the bet Wall Street laughed at — chips not just for games, but for every kind of computing."],
+   ["The turning point","When the AI revolution arrived, the whole world needed exactly those chips. Nvidia rose into the most valuable companies on earth. The dishwasher boy is the emperor of the chip age."]]},
+  lesson:{hi:"शुरुआती छोटा काम शर्म नहीं, training है। और डर को दुश्मन नहीं — discipline बनाइए।",en:"A humble first job is not shame; it is training. And make fear your discipline, not your enemy."}},
+ ortega:{
+  tag:{hi:"13 की उम्र का दुकान-helper, Zara का मालिक",en:"Shop hand at 13, owner of Zara"},
+  nm:{hi:"अमानसियो ओर्तेगा",en:"Amancio Ortega"},
+  meta:{hi:"Zara / Inditex के संस्थापक · 3 मिनट",en:"Founder, Zara / Inditex · 3 min read"},
+  quote:{hi:"घर में हाथ से सिले गाउन से — दुनिया का सबसे बड़ा fashion साम्राज्य।",en:"From gowns hand-stitched at home — to the world biggest fashion empire."},
+  stat:{s_hi:"13 की उम्र · दुकान का helper",s_en:"Age 13 · shop hand",t_hi:"Zara · 7,400+ stores",t_en:"Zara · 7,400+ stores"},
+  beats:{
+   hi:[["शुरुआत","स्पेन में railway मज़दूर का बेटा — 1936 में जन्म, ग़रीबी में बचपन। कहा जाता है कि माँ को दुकान पर उधार से मना होते देखा, और स्कूल छोड़ दिया। 13-14 की उम्र में कपड़ों की दुकान में helper बन गया।"],
+   ["पहला कदम","1963 में घर से ही शुरुआत — पत्नी Rosalía के साथ हाथ से bathrobe और गाउन सिलकर बेचना। दुकान से सीखा था: असली पैसा बीच के लोगों को जाता है। तो उन्होंने बीच की हर कड़ी ख़ुद बनने का फ़ैसला किया।"],
+   ["मोड़","1975 में पहला Zara store खोला। formula सादा और क्रांतिकारी: fashion runway से store तक हफ़्तों में, महीनों में नहीं — ख़ुद design, ख़ुद बनाओ, ख़ुद बेचो। ग्राहक जो चाहे, वो दो हफ़्ते में shelf पर।"],
+   ["आज","Inditex — Zara समेत 8 brands, 7,400+ stores — दुनिया की सबसे बड़ी कपड़ा कंपनी। और वो आदमी? आज भी उसी शहर के café में coffee पीता है, interview नहीं देता। काम बोलता है।"]],
+   en:[["The starting point","Son of a railway worker in Spain — born 1936, a childhood of scarcity. The story goes that he watched his mother refused credit at a shop, and left school. By 13 or 14 he was a helper in a clothing store."],
+   ["The first move","In 1963 he began from home — hand-stitching bathrobes and gowns with his wife Rosalía. The shop had taught him where the money really went: to the middlemen. So he decided to become every link in the chain himself."],
+   ["The turning point","In 1975 he opened the first Zara. The formula was simple and revolutionary: fashion from runway to store in weeks, not months — design it yourself, make it yourself, sell it yourself. Whatever the customer wants, on the shelf in a fortnight."],
+   ["Today","Inditex — eight brands including Zara, 7,400+ stores — the world largest clothing company. And the man? He still drinks coffee in the same city café, and gives no interviews. The work speaks."]]},
+  lesson:{hi:"बीच की कड़ियाँ हटाइए — जो पूरा chain समझता है, वही बाज़ार जीतता है। और शोहरत नहीं, काम बोलना चाहिए।",en:"Cut out the middle links — the one who understands the whole chain wins the market. Let the work, not the fame, do the talking."}},
+ brin:{
+  tag:{hi:"6 साल का शरणार्थी, Google का सह-संस्थापक",en:"A refugee at 6, co-founder of Google"},
+  nm:{hi:"सर्गेई ब्रिन",en:"Sergey Brin"},
+  meta:{hi:"Google के सह-संस्थापक · 3 मिनट",en:"Co-founder, Google · 3 min read"},
+  quote:{hi:"जिस देश में पिता को सपना देखने की इजाज़त नहीं थी, बेटे ने बाहर निकलकर दुनिया बदल दी।",en:"In the country where his father was not allowed to dream, the son left — and changed the world."},
+  stat:{s_hi:"6 साल · शरणार्थी परिवार",s_en:"Age 6 · refugee family",t_hi:"$270 bn · Google",t_en:"$270 bn · Google"},
+  beats:{
+   hi:[["शुरुआत","मास्को में जन्म। यहूदी परिवार — पिता astronomer बनना चाहते थे, पर सोवियत व्यवस्था ने रास्ता बंद कर दिया। 1979 में, जब सर्गेई 6 साल के थे, परिवार सब कुछ छोड़कर अमेरिका आ गया।"],
+   ["पहला कदम","पिता ने Maryland में गणित पढ़ाया; बेटे को गणित और computers घुट्टी में मिले। Stanford में PhD करते हुए 1995 में Larry Page से मुलाक़ात हुई — पहली मुलाक़ात में दोनों हर बात पर लड़े।"],
+   ["मोड़","उसी बहस से एक idea निकला: internet के हर पन्ने को उसकी अहमियत से रैंक करना। 1998 में एक किराए के garage से Google शुरू हुई — मक़सद एक line में: दुनिया की जानकारी को सबके लिए खोलना।"],
+   ["आज","आज Google के बिना internet की कल्पना मुश्किल है। जो परिवार एक बंद दरवाज़े से भागा था, उसके बेटे ने अरबों लोगों के लिए हर दरवाज़ा खोल दिया।"]],
+   en:[["The starting point","Born in Moscow. A Jewish family — his father dreamed of astronomy, but the Soviet system closed the road. In 1979, when Sergey was six, the family left everything for America."],
+   ["The first move","His father taught mathematics in Maryland; the son grew up steeped in math and computers. During a Stanford PhD he met Larry Page in 1995 — and they argued about everything on day one."],
+   ["The turning point","Out of that arguing came an idea: rank every page on the internet by how much it matters. In 1998, from a rented garage, Google began — its purpose in one line: open the world information to everyone."],
+   ["Today","The internet is hard to imagine without Google. The family that fled a closed door — its son opened every door, for billions."]]},
+  lesson:{hi:"जहाँ पैदा हुए वो आपकी क़िस्मत नहीं है। और अच्छी बहस दुश्मनी नहीं — partnership की शुरुआत हो सकती है।",en:"Where you were born is not your fate. And a good argument is not enmity — it can be the start of a partnership."}},
+ buffett:{
+  tag:{hi:"11 की उम्र में पहला share — compounding का बादशाह",en:"First share at 11 — the king of compounding"},
+  nm:{hi:"वॉरेन बफ़ेट",en:"Warren Buffett"},
+  meta:{hi:"Berkshire Hathaway के chairman · 3 मिनट",en:"Chairman, Berkshire Hathaway · 3 min read"},
+  quote:{hi:"अमीरी जल्दी नहीं आती — वो compound होती है।",en:"Wealth does not come fast — it compounds."},
+  stat:{s_hi:"11 की उम्र · पहला share",s_en:"Age 11 · first share",t_hi:"$149 bn · वही पुराना घर",t_en:"$149 bn · same old house"},
+  beats:{
+   hi:[["शुरुआत","ओमाहा, अमेरिका — बचपन से पैसे का खेल समझने का जुनून। अख़बार बाँटे, chewing gum और Coke की बोतलें घर-घर बेचीं, दोस्तों के साथ पुरानी pinball machines ख़रीदकर सैलून में लगाईं। 11 की उम्र में पहला share ख़रीदा।"],
+   ["पहला कदम","Harvard ने मना कर दिया — तो Columbia गए, जहाँ अपने हीरो Ben Graham से investing का असली पाठ सीखा: क़ीमत और value अलग चीज़ें हैं। 1956 में परिवार और दोस्तों के पैसों से पहली partnership शुरू की।"],
+   ["असफलता","उनका सबसे मशहूर सौदा दरअसल एक ग़लती थी — घाटे में चलती कपड़ा mill 'Berkshire Hathaway' ज़िद में ख़रीद ली। mill तो डूब गई, पर उन्होंने उसे investing की मशीन में बदल दिया।"],
+   ["मोड़","फिर दशकों तक सिर्फ़ एक काम — समझदारी से ख़रीदना और इंतज़ार करना। आज Berkshire दुनिया की सबसे बड़ी कंपनियों में है; वे 1958 में ख़रीदे उसी घर में रहते हैं, और लगभग पूरी दौलत दान कर रहे हैं। उनकी दौलत का 90%+ उनकी 60 की उम्र के बाद आया — यही compounding है।"]],
+   en:[["The starting point","Omaha, USA — obsessed since childhood with how money works. He delivered newspapers, sold gum and Coke bottles door to door, ran used pinball machines in barbershops with friends. At 11 he bought his first share."],
+   ["The first move","Harvard rejected him — so he went to Columbia, learning the real lesson of investing from his hero Ben Graham: price and value are different things. In 1956 he started his first partnership with money from family and friends."],
+   ["The failure","His most famous deal was actually a mistake — buying a failing textile mill called Berkshire Hathaway out of stubbornness. The mill sank, but he turned its shell into an investing machine."],
+   ["The turning point","Then, for decades, just one job — buy wisely and wait. Berkshire is now among the world largest companies; he still lives in the house he bought in 1958, and is giving nearly all of it away. Over 90% of his wealth came after age 60 — that is compounding."]]},
+  lesson:{hi:"जल्दी अमीर बनाने वाले हर रास्ते से बचिए। सही चीज़ ख़रीदिए, बैठिए, और time को काम करने दीजिए — compounding देर से दिखती है पर सबको हरा देती है।",en:"Avoid every road that promises fast riches. Buy the right thing, sit, and let time work — compounding shows up late but beats everyone."}},
  adani:{
   tag:{hi:"16 पर पढ़ाई छोड़ी — आज 6 listed कंपनियाँ",en:"Left college at 16 — six listed companies today"},
   nm:{hi:"गौतम अडानी",en:"Gautam Adani"},
@@ -561,7 +646,8 @@ function rowWorld(b,max){
   <div class="rankbox"><span class="rank">${b.r}</span>${steps(b.usd,max)}</div>
   <div class="who"><div class="nm">${b.nm}</div><div class="co">${b.co[LANG]}</div>
    <span class="origin">${b.origin[LANG]}</span>${b.live?'<span class="livb">● live</span>':''}</div>
-  <div class="worth"><div class="v">$${fmt(b.usd)} bn</div><div class="u">${b.self?(LANG==='hi'?'self-made':'self-made'):(LANG==='hi'?'विरासत':'inherited')}</div></div></div>`}
+  <div class="worth"><div class="v">$${fmt(b.usd)} bn</div><div class="u">${b.self?'self-made':(LANG==='hi'?'विरासत':'inherited')}</div></div>
+  ${b.story?`<button class="storybtn" onclick="openStory('${b.story}')">${I18N[LANG].story} →</button>`:''}</div>`}
 
 function renderLists(){
  const maxI=Math.max(...INDIA.map(b=>b.lcr)),maxW=Math.max(...WORLD.map(b=>b.usd));
