@@ -1,79 +1,79 @@
 {
- "updated_iso": "2026-09-23",
- "updated_hi": "23 सितंबर 2026 को अपडेट",
- "updated_en": "Updated 23 September 2026",
- "usd_inr": 95.73,
+ "updated_iso": "2026-09-24",
+ "updated_hi": "24 सितंबर 2026 को अपडेट",
+ "updated_en": "Updated 24 September 2026",
+ "usd_inr": 95.94,
  "mode": "live (per-ticker fallback on misses)",
  "india": {
   "Mukesh Ambani & family": {
-   "lcr": 8.46,
-   "usd": 88.3
+   "lcr": 8.26,
+   "usd": 86.1
   },
   "Gautam Adani & family": {
-   "lcr": 11.61,
-   "usd": 121.2
+   "lcr": 11.34,
+   "usd": 118.2
   },
   "Sunil Mittal & family": {
-   "lcr": 2.63,
-   "usd": 27.5
+   "lcr": 2.58,
+   "usd": 26.9
   },
   "Dilip Shanghvi & family": {
-   "lcr": 2.44,
-   "usd": 25.5
+   "lcr": 2.42,
+   "usd": 25.2
   },
   "RK Damani & family": {
-   "lcr": 1.86,
-   "usd": 19.5
+   "lcr": 1.84,
+   "usd": 19.2
   },
   "Shiv Nadar family": {
-   "lcr": 2.07,
-   "usd": 21.6
+   "lcr": 2.05,
+   "usd": 21.3
   },
   "Uday Kotak": {
-   "lcr": 1.06,
-   "usd": 11.1
+   "lcr": 1.04,
+   "usd": 10.9
   },
   "Ravi Jaipuria": {
-   "lcr": 0.88,
-   "usd": 9.2
+   "lcr": 0.87,
+   "usd": 9.0
   },
   "KP Singh & family": {
-   "lcr": 1.24,
-   "usd": 12.9
+   "lcr": 1.23,
+   "usd": 12.8
   },
   "Pankaj Patel & family": {
    "lcr": 0.88,
-   "usd": 9.1
+   "usd": 9.2
   },
   "Falguni Nayar & family": {
-   "lcr": 0.51,
-   "usd": 5.3
+   "lcr": 0.5,
+   "usd": 5.2
   }
  },
  "world": {
   "Elon Musk": {
-   "usd": 1037.7
+   "usd": 1009.0
   },
   "Mark Zuckerberg": {
-   "usd": 257.2
+   "usd": 262.8
   },
   "Jeff Bezos": {
-   "usd": 238.1
+   "usd": 233.7
   },
   "Jensen Huang": {
-   "usd": 191.1
+   "usd": 187.5
   },
   "Larry Ellison": {
-   "usd": 182.4
+   "usd": 170.3
   },
   "Bernard Arnault": {
-   "usd": 111.9
+   "usd": 111.5
   },
   "Mukesh Ambani": {
-   "usd": 88.3
+   "usd": 86.1
   },
   "Gautam Adani": {
-   "usd": 121.2
+   "usd": 118.2
   }
  }
 }
