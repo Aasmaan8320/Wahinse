@@ -1,7 +1,7 @@
 {
- "updated_iso": "2026-10-19",
- "updated_hi": "19 अक्टूबर 2026 को अपडेट",
- "updated_en": "Updated 19 October 2026",
+ "updated_iso": "2026-10-20",
+ "updated_hi": "20 अक्टूबर 2026 को अपडेट",
+ "updated_en": "Updated 20 October 2026",
  "usd_inr": 94.92,
  "mode": "live (per-ticker fallback on misses)",
  "india": {
@@ -52,22 +52,22 @@
  },
  "world": {
   "Elon Musk": {
-   "usd": 1009.9
+   "usd": 1009.7
   },
   "Mark Zuckerberg": {
-   "usd": 240.8
+   "usd": 238.2
   },
   "Jeff Bezos": {
-   "usd": 248.6
+   "usd": 250.0
   },
   "Jensen Huang": {
-   "usd": 184.3
+   "usd": 183.3
   },
   "Larry Ellison": {
-   "usd": 161.2
+   "usd": 165.6
   },
   "Bernard Arnault": {
-   "usd": 107.8
+   "usd": 108.1
   },
   "Mukesh Ambani": {
    "usd": 85.8
